@@ -5,7 +5,7 @@
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <meta name="description" content="HenHouse Partners connects executive talent, technology delivery, and education platforms across Japan and Asia-Pacific.">
    <title>HenHouse Partners | Executive Group & Venture Holding</title>
-   <link rel="icon" type="image/jpeg" href="./henhouse-partners-logo.jpeg">
+   <link rel="icon" type="image/jpeg" href="./logos/henhouse-partners.jpeg">
    <!-- Tailwind CSS -->
    <link rel="stylesheet" href="./styles.css">
    <!-- FontAwesome Icons -->
@@ -87,6 +87,29 @@
        #contact-modal .glass-card { background: #FFFFFF; }
        #contact-modal h3 { color: #10233A !important; }
        #contact-modal input, #contact-modal select, #contact-modal textarea { background: #F4F9FD !important; color: #10233A !important; }
+
+       /* Frame the supplied logos without changing the original artwork. */
+       .logo-crop { position: relative; display: block; overflow: hidden; background: white; flex-shrink: 0; }
+       .logo-crop img { position: absolute; height: auto; max-width: none; }
+       .partners-logo { aspect-ratio: 1880 / 930; }
+       .partners-logo img { width: 108.9362%; left: -4.2553%; top: -59.1398%; }
+       .brand-logo { width: 224px; }
+       .footer-brand-logo { width: 224px; max-width: 100%; border-radius: 8px; }
+       .venture-brand-row { display: flex; flex-direction: column; align-items: flex-start; gap: 16px; }
+       .venture-logo-area { width: 100%; height: 156px; display: flex; align-items: center; justify-content: center; }
+       .keytalent-logo { width: 240px; max-width: 100%; aspect-ratio: 6180 / 3900; }
+       .keytalent-logo img { width: 105.178%; left: -1.6181%; top: -25.641%; }
+       .technology-logo { width: 292px; max-width: 100%; aspect-ratio: 1895 / 910; }
+       .technology-logo img { width: 108.0739%; left: -5.0132%; top: -63.7363%; }
+       .academate-logo { width: 200px; max-width: 100%; }
+       .henhouse-japan-logo { width: 300px; max-width: 100%; }
+       .academate-logo img, .henhouse-japan-logo img { width: 100%; height: auto; display: block; }
+       @media (max-width: 639px) { .brand-logo { width: 190px; } }
+       @media (min-width: 768px) and (max-width: 1099px) {
+           .glass-header nav { display: none; }
+           .glass-header .md\:hidden { display: flex; }
+           #mobile-menu:not(.hidden) { display: block; }
+       }
    </style>
 </head>
 <body class="bg-grid antialiased selection:bg-bronze-500 selection:text-navy-950">
@@ -96,8 +119,8 @@
        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between">
 
            <!-- Brand Logo -->
-           <a href="#" class="group" aria-label="HenHouse Partners home">
-               <img src="./henhouse-partners-logo.jpeg" alt="HenHouse Partners" class="h-20 sm:h-24 w-auto max-w-[300px] sm:max-w-[360px] rounded-md object-contain bg-white shadow-lg shadow-bronze-500/10">
+           <a href="#" class="group brand-logo logo-crop partners-logo" aria-label="HenHouse Partners home">
+               <img src="./logos/henhouse-partners.jpeg" alt="HenHouse Partners" width="2048" height="2048">
            </a>
 
            <!-- Desktop Nav Links -->
@@ -299,10 +322,8 @@
                <!-- Card 1: KeyTalent -->
                <div class="portfolio-card talent glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
                    <div class="space-y-6">
-                       <div class="flex justify-between items-start">
-                           <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900/50 to-navy-800 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl">
-                               <i class="fa-solid fa-user-tie"></i>
-                           </div>
+                       <div class="venture-brand-row">
+                           <div class="venture-logo-area"><div class="logo-crop keytalent-logo"><img src="./logos/keytalent.png" alt="KeyTalent" width="6500" height="6500" loading="lazy"></div></div>
                            <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
                                Executive Recruitment
                            </span>
@@ -338,10 +359,8 @@
                <!-- Card 2: HenHouse Technology -->
                <div class="portfolio-card tech glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group border-bronze-500/30">
                    <div class="space-y-6">
-                       <div class="flex justify-between items-start">
-                           <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-900/50 to-navy-800 border border-bronze-500/30 flex items-center justify-center text-bronze-400 text-2xl">
-                               <i class="fa-solid fa-code"></i>
-                           </div>
+                       <div class="venture-brand-row">
+                           <div class="venture-logo-area"><div class="logo-crop technology-logo"><img src="./logos/henhouse-technology.jpeg" alt="HenHouse Technology" width="2048" height="2048" loading="lazy"></div></div>
                            <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-bronze-500/10 text-bronze-300 border border-bronze-500/20">
                                Software & Outsourcing
                            </span>
@@ -377,10 +396,8 @@
                <!-- Card 3: Academate -->
                <div class="portfolio-card edtech glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
                    <div class="space-y-6">
-                       <div class="flex justify-between items-start">
-                           <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-900/50 to-navy-800 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl">
-                               <i class="fa-solid fa-graduation-cap"></i>
-                           </div>
+                       <div class="venture-brand-row">
+                           <div class="venture-logo-area"><div class="academate-logo"><img src="./logos/academate.png" alt="Academate" width="200" height="105" loading="lazy"></div></div>
                            <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
                                EdTech & ERP
                            </span>
@@ -416,10 +433,8 @@
                <!-- Card 4: Hen House Foods -->
                <div class="portfolio-card food glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
                    <div class="space-y-6">
-                       <div class="flex justify-between items-start">
-                           <div class="w-14 h-14 rounded-xl bg-sky-100 border border-sky-300 flex items-center justify-center text-sky-600 text-2xl">
-                               <i class="fa-solid fa-seedling"></i>
-                           </div>
+                       <div class="venture-brand-row">
+                           <div class="venture-logo-area"><div class="henhouse-japan-logo"><img src="./logos/henhouse-japan.png" alt="HenHouse Japan" width="1701" height="383" loading="lazy"></div></div>
                            <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-sky-100 text-sky-700 border border-sky-200">
                                Specialty Foods
                            </span>
@@ -580,7 +595,7 @@
 
                <!-- Col 1: Brand Info -->
                <div class="space-y-4 md:col-span-1">
-                   <img src="./henhouse-partners-logo.jpeg" alt="HenHouse Partners" class="h-14 w-auto max-w-[230px] rounded-md object-contain bg-white">
+                   <div class="footer-brand-logo logo-crop partners-logo"><img src="./logos/henhouse-partners.jpeg" alt="HenHouse Partners" width="2048" height="2048" loading="lazy"></div>
                    <p class="text-xs text-slate-400 leading-relaxed">
                        Executive investment and group platform overseeing KeyTalent, HenHouse Technology, Academate, and Hen House Foods.
                    </p>
