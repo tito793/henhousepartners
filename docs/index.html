@@ -1,0 +1,758 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <meta name="description" content="HenHouse Partners connects executive talent, technology delivery, and education platforms across Japan and Asia-Pacific.">
+   <title>HenHouse Partners | Executive Group & Venture Holding</title>
+   <link rel="icon" type="image/jpeg" href="./henhouse-partners-logo.jpeg">
+   <!-- Tailwind CSS -->
+   <link rel="stylesheet" href="./styles.css">
+   <!-- FontAwesome Icons -->
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <!-- Google Fonts -->
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,600;0,700;1,400&display=swap" rel="stylesheet">
+
+   
+   <style>
+       body {
+           background-color: #F4F9FD;
+           color: #10233A;
+           font-family: 'Plus Jakarta Sans', sans-serif;
+           overflow-x: hidden;
+       }
+
+       .gold-gradient-text {
+           background: linear-gradient(135deg, #10233A 0%, #2F87C7 50%, #59ACEA 100%);
+           -webkit-background-clip: text;
+           -webkit-text-fill-color: transparent;
+       }
+
+       .gold-border-glow {
+           box-shadow: 0 14px 36px rgba(47, 135, 199, 0.14);
+       }
+
+       .glass-card {
+           background: rgba(255, 255, 255, 0.92);
+           backdrop-filter: blur(16px);
+           -webkit-backdrop-filter: blur(16px);
+           border: 1px solid rgba(89, 172, 234, 0.24);
+           box-shadow: 0 12px 30px rgba(16, 35, 58, 0.07);
+       }
+
+       .glass-card-hover:hover {
+           background: #FFFFFF;
+           border-color: rgba(89, 172, 234, 0.7);
+           transform: translateY(-4px);
+       }
+
+       .glass-header {
+           background: rgba(255, 255, 255, 0.96);
+           backdrop-filter: blur(20px);
+           border-top: 7px solid #59ACEA;
+           border-bottom: 1px solid rgba(89, 172, 234, 0.2);
+       }
+
+       /* Hero Background Overlay */
+       .hero-pattern {
+           background-image: radial-gradient(circle at 70% 20%, rgba(186, 226, 250, 0.72) 0%, rgba(244, 249, 253, 1) 68%);
+       }
+
+       /* Subtle grid background */
+       .bg-grid {
+           background-size: 40px 40px;
+           background-image:
+               linear-gradient(to right, rgba(89, 172, 234, 0.08) 1px, transparent 1px),
+               linear-gradient(to bottom, rgba(89, 172, 234, 0.08) 1px, transparent 1px);
+       }
+
+       main, section { color: #10233A; }
+       section h1, section h2, section h3, section h4 { color: #10233A !important; }
+       section .text-slate-200, section .text-slate-300 { color: #334155 !important; }
+       section .text-slate-400 { color: #64748B !important; }
+       #home .text-white { color: #10233A !important; }
+       section .bg-white\/5 { background-color: #EAF5FC !important; }
+       section .border-white\/10, section .border-white\/5 { border-color: rgba(89, 172, 234, 0.24) !important; }
+       #about, #synergy { background: rgba(234, 245, 252, 0.72) !important; }
+       #leadership .bg-gradient-to-br { background: #FFFFFF !important; }
+       #leadership .bg-navy-950 { background: #EAF5FC !important; }
+       #leadership .text-white { color: #10233A !important; }
+       .portfolio-card a.text-white { color: #FFFFFF !important; background: #2F87C7 !important; }
+       .portfolio-card a.text-white:hover { background: #59ACEA !important; color: #10233A !important; }
+       .glass-header nav a { color: #334155 !important; }
+       .glass-header nav a:hover { color: #2F87C7 !important; }
+       #mobile-menu a { color: #334155 !important; }
+       #contact-modal .glass-card { background: #FFFFFF; }
+       #contact-modal h3 { color: #10233A !important; }
+       #contact-modal input, #contact-modal select, #contact-modal textarea { background: #F4F9FD !important; color: #10233A !important; }
+   </style>
+</head>
+<body class="bg-grid antialiased selection:bg-bronze-500 selection:text-navy-950">
+
+   <!-- NAVIGATION BAR -->
+   <header class="fixed top-0 left-0 right-0 z-50 glass-header transition-all duration-300" id="main-header">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-28 flex items-center justify-between">
+
+           <!-- Brand Logo -->
+           <a href="#" class="group" aria-label="HenHouse Partners home">
+               <img src="./henhouse-partners-logo.jpeg" alt="HenHouse Partners" class="h-20 sm:h-24 w-auto max-w-[300px] sm:max-w-[360px] rounded-md object-contain bg-white shadow-lg shadow-bronze-500/10">
+           </a>
+
+           <!-- Desktop Nav Links -->
+           <nav class="hidden md:flex items-center space-x-8">
+               <a href="#about" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-bronze-500 hover:after:w-full after:transition-all">About Us</a>
+               <a href="#portfolio" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-bronze-500 hover:after:w-full after:transition-all">Group Companies</a>
+               <a href="#synergy" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-bronze-500 hover:after:w-full after:transition-all">Ecosystem Synergy</a>
+               <a href="#leadership" class="text-sm font-medium text-slate-300 hover:text-white transition-colors relative py-1 after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-0 after:h-[2px] after:bg-bronze-500 hover:after:w-full after:transition-all">Leadership</a>
+
+               <button onclick="openModal()" class="px-5 py-2.5 rounded-full text-xs font-bold uppercase tracking-wider bg-gradient-to-r from-bronze-500 to-bronze-600 hover:from-bronze-400 hover:to-bronze-500 text-navy-950 shadow-md shadow-bronze-500/20 hover:shadow-bronze-500/40 transition-all duration-300">
+                   Get In Touch
+               </button>
+           </nav>
+
+           <!-- Mobile Menu Toggle -->
+           <div class="md:hidden flex items-center">
+               <button id="mobile-menu-btn" class="text-slate-300 hover:text-white p-2 rounded-lg focus:outline-none">
+                   <i class="fa-solid fa-bars text-xl" id="menu-icon"></i>
+               </button>
+           </div>
+       </div>
+
+       <!-- Mobile Menu Navigation -->
+       <div id="mobile-menu" class="hidden md:hidden glass-card border-t border-white/10 px-6 py-6 space-y-4">
+           <a href="#about" class="mobile-link block text-slate-200 hover:text-bronze-400 font-medium text-base">About Us</a>
+           <a href="#portfolio" class="mobile-link block text-slate-200 hover:text-bronze-400 font-medium text-base">Group Companies</a>
+           <a href="#synergy" class="mobile-link block text-slate-200 hover:text-bronze-400 font-medium text-base">Ecosystem Synergy</a>
+           <a href="#leadership" class="mobile-link block text-slate-200 hover:text-bronze-400 font-medium text-base">Leadership</a>
+           <button onclick="openModal(); closeMobileMenu();" class="w-full mt-2 px-5 py-3 rounded-xl text-center text-xs font-bold uppercase tracking-wider bg-bronze-500 text-navy-950">
+               Get In Touch
+           </button>
+       </div>
+   </header>
+
+   <!-- HERO SECTION -->
+   <section class="relative min-h-screen flex items-center pt-28 pb-16 hero-pattern overflow-hidden">
+       <!-- Background Ambient Light -->
+       <div class="absolute top-1/4 left-1/2 -translate-x-1/2 w-[600px] h-[600px] bg-bronze-500/10 rounded-full blur-[140px] pointer-events-none"></div>
+       <div class="absolute bottom-10 right-10 w-[400px] h-[400px] bg-navy-800/40 rounded-full blur-[100px] pointer-events-none"></div>
+
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+           <div class="text-center max-w-4xl mx-auto space-y-8">
+
+               <!-- Tagline Badge -->
+               <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-card border border-bronze-500/20 text-bronze-300 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+                   <span class="w-2 h-2 rounded-full bg-bronze-400 animate-pulse"></span>
+                   <span>Empowering Technology, Talent & Educational Progress Across APAC</span>
+               </div>
+
+               <!-- Main Heading -->
+               <h1 class="text-4xl sm:text-6xl lg:text-7xl font-extrabold tracking-tight text-white leading-tight">
+                   Architecting Digital Growth Through <span class="gold-gradient-text block mt-2">Synergistic Investment</span>
+               </h1>
+
+               <!-- Subtitle -->
+               <p class="text-slate-300 text-lg sm:text-xl font-light leading-relaxed max-w-3xl mx-auto">
+                   HenHouse Partners is an executive investment and operational holding platform oversight group. We unite elite technology recruitment, software engineering, and educational technology to power transformation across Asia-Pacific.
+               </p>
+
+               <!-- Action Buttons -->
+               <div class="flex flex-col sm:flex-row items-center justify-center gap-4 pt-4">
+                   <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full bg-gradient-to-r from-bronze-500 to-bronze-600 hover:from-bronze-400 hover:to-bronze-500 text-navy-950 font-bold text-sm tracking-wider uppercase transition-all duration-300 shadow-xl shadow-bronze-500/20 flex items-center justify-center space-x-2 group">
+                       <span>Explore Subsidiaries</span>
+                       <i class="fa-solid fa-arrow-right text-xs group-hover:translate-x-1 transition-transform"></i>
+                   </a>
+                   <button onclick="openModal()" class="w-full sm:w-auto px-8 py-4 rounded-full glass-card text-white hover:text-bronze-300 hover:border-bronze-500/40 font-bold text-sm tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-2">
+                       <span>Inquire Partnership</span>
+                   </button>
+               </div>
+
+               <!-- Corporate Metric Badges -->
+               <div class="pt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 max-w-4xl mx-auto">
+                   <div class="p-4">
+                       <div class="text-3xl lg:text-4xl font-extrabold text-white font-serif">4</div>
+                       <div class="text-xs uppercase tracking-widest text-slate-400 mt-1">Portfolio Ventures</div>
+                   </div>
+                   <div class="p-4">
+                       <div class="text-3xl lg:text-4xl font-extrabold text-white font-serif">APAC</div>
+                       <div class="text-xs uppercase tracking-widest text-slate-400 mt-1">Strategic Market Focus</div>
+                   </div>
+                   <div class="p-4">
+                       <div class="text-3xl lg:text-4xl font-extrabold text-white font-serif">100%</div>
+                       <div class="text-xs uppercase tracking-widest text-slate-400 mt-1">Synergistic Integration</div>
+                   </div>
+                   <div class="p-4">
+                       <div class="text-3xl lg:text-4xl font-extrabold text-white font-serif">Enterprise</div>
+                       <div class="text-xs uppercase tracking-widest text-slate-400 mt-1">Scale Solutions</div>
+                   </div>
+               </div>
+
+           </div>
+       </div>
+   </section>
+
+   <!-- ABOUT SECTION -->
+   <section id="about" class="py-24 relative bg-navy-950/60 border-t border-white/5">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+
+               <!-- Left Column Text -->
+               <div class="lg:col-span-7 space-y-6">
+                   <div class="inline-flex items-center space-x-2 text-bronze-400 text-xs font-bold uppercase tracking-widest">
+                       <i class="fa-solid fa-layer-group"></i>
+                       <span>About HenHouse Partners</span>
+                   </div>
+                   <h2 class="text-3xl sm:text-4xl font-bold text-white tracking-tight">
+                       Bridging Capital, Human Talent, & Operational Excellence
+                   </h2>
+                   <p class="text-slate-300 leading-relaxed text-base font-light">
+                       As the parent group overseeing high-impact entities, HenHouse Partners fosters sustainable innovation by connecting top-tier executive talent, enterprise IT delivery, and futuristic academic infrastructure.
+                   </p>
+                   <p class="text-slate-400 leading-relaxed text-base font-light">
+                       Our cross-border insights and deep roots in Japan and broader Asia allow us to identify market frictions and build high-efficiency subsidiaries that solve complex business and institutional problems.
+                   </p>
+
+                   <!-- Feature Points -->
+                   <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4">
+                       <div class="glass-card p-4 rounded-xl flex items-start space-x-3">
+                           <i class="fa-solid fa-chess-knight text-bronze-400 text-xl mt-1"></i>
+                           <div>
+                               <h4 class="text-white font-semibold text-sm">Strategic Oversight</h4>
+                               <p class="text-xs text-slate-400 mt-1">Active leadership and governance guiding subsidiary growth.</p>
+                           </div>
+                       </div>
+                       <div class="glass-card p-4 rounded-xl flex items-start space-x-3">
+                           <i class="fa-solid fa-network-wired text-bronze-400 text-xl mt-1"></i>
+                           <div>
+                               <h4 class="text-white font-semibold text-sm">Shared Ecosystem</h4>
+                               <p class="text-xs text-slate-400 mt-1">Seamless cross-entity collaboration and joint technical capabilities.</p>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+               <!-- Right Column Box Display -->
+               <div class="lg:col-span-5">
+                   <div class="relative glass-card p-8 rounded-2xl border border-bronze-500/20 gold-border-glow">
+                       <div class="absolute -top-3 -right-3 w-12 h-12 rounded-full bg-bronze-500/20 flex items-center justify-center border border-bronze-400">
+                           <i class="fa-solid fa-quote-right text-bronze-300"></i>
+                       </div>
+                       <h3 class="text-xl font-serif font-bold text-white mb-4">Core Investment Vision</h3>
+                       <blockquote class="text-slate-300 italic text-sm leading-relaxed mb-6">
+                           "True enterprise transformation occurs when technology is backed by elite leaders and deployed within sound institutional frameworks."
+                       </blockquote>
+                       <div class="flex items-center space-x-3 border-t border-white/10 pt-4">
+                           <div class="w-10 h-10 rounded-full bg-bronze-500/20 flex items-center justify-center text-bronze-300 font-bold">
+                               HP
+                           </div>
+                           <div>
+                               <div class="text-sm font-bold text-white">HenHouse Partners Board</div>
+                               <div class="text-xs text-slate-400">Tokyo & Regional Hubs</div>
+                           </div>
+                       </div>
+                   </div>
+               </div>
+
+           </div>
+       </div>
+   </section>
+
+   <!-- SUBSIDIARIES / PORTFOLIO SECTION -->
+   <section id="portfolio" class="py-24 relative">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+           <!-- Section Header -->
+           <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+               <div class="inline-flex items-center space-x-2 text-bronze-400 text-xs font-bold uppercase tracking-widest">
+                   <i class="fa-solid fa-briefcase"></i>
+                   <span>Group Portfolio</span>
+               </div>
+               <h2 class="text-3xl sm:text-5xl font-bold text-white tracking-tight">Our Key Ventures</h2>
+               <p class="text-slate-400 text-base">
+                   Discover the specialized market leaders operating under the HenHouse Partners umbrella.
+               </p>
+
+               <!-- Filter Buttons -->
+               <div class="flex justify-center flex-wrap gap-2 pt-4">
+                   <button onclick="filterPortfolio('all')" class="portfolio-btn px-5 py-2 rounded-full text-xs font-semibold border border-bronze-500/40 bg-bronze-500 text-navy-950 transition-all active-btn" id="btn-all">
+                       All Entities
+                   </button>
+                   <button onclick="filterPortfolio('talent')" class="portfolio-btn px-5 py-2 rounded-full text-xs font-semibold border border-white/10 text-slate-300 hover:border-bronze-500/40 hover:text-white transition-all" id="btn-talent">
+                       Talent & Recruitment
+                   </button>
+                   <button onclick="filterPortfolio('tech')" class="portfolio-btn px-5 py-2 rounded-full text-xs font-semibold border border-white/10 text-slate-300 hover:border-bronze-500/40 hover:text-white transition-all" id="btn-tech">
+                       IT & Software Development
+                   </button>
+                   <button onclick="filterPortfolio('edtech')" class="portfolio-btn px-5 py-2 rounded-full text-xs font-semibold border border-white/10 text-slate-300 hover:border-bronze-500/40 hover:text-white transition-all" id="btn-edtech">
+                       EdTech & Academic ERP
+                   </button>
+                   <button onclick="filterPortfolio('food')" class="portfolio-btn px-5 py-2 rounded-full text-xs font-semibold border border-white/10 text-slate-300 hover:border-bronze-500/40 hover:text-white transition-all" id="btn-food">
+                       Food & Specialty Imports
+                   </button>
+               </div>
+           </div>
+
+           <!-- Portfolio Cards Grid -->
+           <div class="grid grid-cols-1 md:grid-cols-2 gap-8" id="portfolio-grid">
+
+               <!-- Card 1: KeyTalent -->
+               <div class="portfolio-card talent glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
+                   <div class="space-y-6">
+                       <div class="flex justify-between items-start">
+                           <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-blue-900/50 to-navy-800 border border-blue-500/30 flex items-center justify-center text-blue-400 text-2xl">
+                               <i class="fa-solid fa-user-tie"></i>
+                           </div>
+                           <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-blue-500/10 text-blue-300 border border-blue-500/20">
+                               Executive Recruitment
+                           </span>
+                       </div>
+
+                       <div>
+                           <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-bronze-300 transition-colors">KeyTalent</h3>
+                           <p class="text-xs text-blue-400 font-semibold mb-4">keytalent.co.jp</p>
+                           <p class="text-slate-300 text-sm leading-relaxed">
+                               Elite executive search and technology recruitment specialist focusing on Senior IT, AI/Data Science, C-Suite leadership, and enterprise software roles across Japan and APAC.
+                           </p>
+                       </div>
+
+                       <!-- Focus Pills -->
+                       <div class="space-y-2 pt-2 border-t border-white/10">
+                           <div class="text-xs text-slate-400 font-medium">Core Capabilities:</div>
+                           <div class="flex flex-wrap gap-2">
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">C-Suite Search</span>
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">AI & Tech Hiring</span>
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Japan Market Entry</span>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="pt-8">
+                       <a href="https://keytalent.co.jp/" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-bronze-500 hover:text-navy-950 text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-2 border border-white/10">
+                           <span>Visit KeyTalent</span>
+                           <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                       </a>
+                   </div>
+               </div>
+
+               <!-- Card 2: HenHouse Technology -->
+               <div class="portfolio-card tech glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group border-bronze-500/30">
+                   <div class="space-y-6">
+                       <div class="flex justify-between items-start">
+                           <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-amber-900/50 to-navy-800 border border-bronze-500/30 flex items-center justify-center text-bronze-400 text-2xl">
+                               <i class="fa-solid fa-code"></i>
+                           </div>
+                           <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-bronze-500/10 text-bronze-300 border border-bronze-500/20">
+                               Software & Outsourcing
+                           </span>
+                       </div>
+
+                       <div>
+                           <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-bronze-300 transition-colors">HenHouse Technology</h3>
+                           <p class="text-xs text-bronze-400 font-semibold mb-4">henhousetechnology.com</p>
+                           <p class="text-slate-300 text-sm leading-relaxed">
+                               Full-suite IT outsourcing, offshore engineering, custom software development, and digital transformation innovation hub serving high-growth and enterprise clients.
+                           </p>
+                       </div>
+
+                       <!-- Focus Pills -->
+                       <div class="space-y-2 pt-2 border-t border-white/10">
+                           <div class="text-xs text-slate-400 font-medium">Core Capabilities:</div>
+                           <div class="flex flex-wrap gap-2">
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Custom Dev</span>
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">IT Outsourcing</span>
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Cloud & AI Solutions</span>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="pt-8">
+                       <a href="https://henhousetechnology.com/" class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-bronze-500 hover:text-navy-950 text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-2 border border-white/10">
+                           <span>Visit HenHouse Tech</span>
+                           <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                       </a>
+                   </div>
+               </div>
+
+               <!-- Card 3: Academate -->
+               <div class="portfolio-card edtech glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
+                   <div class="space-y-6">
+                       <div class="flex justify-between items-start">
+                           <div class="w-14 h-14 rounded-xl bg-gradient-to-br from-emerald-900/50 to-navy-800 border border-emerald-500/30 flex items-center justify-center text-emerald-400 text-2xl">
+                               <i class="fa-solid fa-graduation-cap"></i>
+                           </div>
+                           <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-emerald-500/10 text-emerald-300 border border-emerald-500/20">
+                               EdTech & ERP
+                           </span>
+                       </div>
+
+                       <div>
+                           <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-bronze-300 transition-colors">Academate</h3>
+                           <p class="text-xs text-emerald-400 font-semibold mb-4">academate.com</p>
+                           <p class="text-slate-300 text-sm leading-relaxed">
+                               Next-generation educational resource and academic management platform designed to streamline institutional operations, learning workflows, and student engagement.
+                           </p>
+                       </div>
+
+                       <!-- Focus Pills -->
+                       <div class="space-y-2 pt-2 border-t border-white/10">
+                           <div class="text-xs text-slate-400 font-medium">Core Capabilities:</div>
+                           <div class="flex flex-wrap gap-2">
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Academic ERP</span>
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">LMS Platforms</span>
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Student Analytics</span>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="pt-8">
+                       <a href="https://academate.com/" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-bronze-500 hover:text-navy-950 text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-2 border border-white/10">
+                           <span>Visit Academate</span>
+                           <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                       </a>
+                   </div>
+               </div>
+
+               <!-- Card 4: Hen House Foods -->
+               <div class="portfolio-card food glass-card glass-card-hover rounded-2xl p-8 flex flex-col justify-between transition-all duration-300 relative group">
+                   <div class="space-y-6">
+                       <div class="flex justify-between items-start">
+                           <div class="w-14 h-14 rounded-xl bg-sky-100 border border-sky-300 flex items-center justify-center text-sky-600 text-2xl">
+                               <i class="fa-solid fa-seedling"></i>
+                           </div>
+                           <span class="text-[10px] font-bold tracking-widest uppercase px-3 py-1 rounded-full bg-sky-100 text-sky-700 border border-sky-200">
+                               Specialty Foods
+                           </span>
+                       </div>
+
+                       <div>
+                           <h3 class="text-2xl font-bold text-white mb-2 group-hover:text-bronze-600 transition-colors">Hen House Foods</h3>
+                           <p class="text-xs text-bronze-600 font-semibold mb-4">henhouse.jp</p>
+                           <p class="text-slate-300 text-sm leading-relaxed">
+                               A Japan-based specialty food business bringing carefully selected Cambodian ingredients to consumers while supporting producers, traditional methods, and local communities.
+                           </p>
+                       </div>
+
+                       <div class="space-y-2 pt-2 border-t border-white/10">
+                           <div class="text-xs text-slate-400 font-medium">Core Products:</div>
+                           <div class="flex flex-wrap gap-2">
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Kampot Pepper</span>
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Cambodian Cashews</span>
+                               <span class="text-[11px] px-2.5 py-1 rounded-md bg-white/5 text-slate-300">Specialty Ingredients</span>
+                           </div>
+                       </div>
+                   </div>
+
+                   <div class="pt-8">
+                       <a href="https://henhouse.jp/" target="_blank" rel="noopener noreferrer" class="w-full py-3 px-4 rounded-xl bg-navy-800 hover:bg-bronze-500 hover:text-navy-950 text-white font-semibold text-xs tracking-wider uppercase transition-all duration-300 flex items-center justify-center space-x-2 border border-white/10">
+                           <span>Visit Hen House Foods</span>
+                           <i class="fa-solid fa-arrow-up-right-from-square text-xs"></i>
+                       </a>
+                   </div>
+               </div>
+
+           </div>
+       </div>
+   </section>
+
+   <!-- ECOSYSTEM SYNERGY SECTION -->
+   <section id="synergy" class="py-24 relative bg-navy-950/80 border-t border-white/5">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div class="text-center max-w-3xl mx-auto mb-16 space-y-4">
+               <div class="inline-flex items-center space-x-2 text-bronze-400 text-xs font-bold uppercase tracking-widest">
+                   <i class="fa-solid fa-diagram-project"></i>
+                   <span>Connected Value Loop</span>
+               </div>
+               <h2 class="text-3xl sm:text-5xl font-bold text-white tracking-tight">The HenHouse Ecosystem Synergy</h2>
+               <p class="text-slate-400 text-base">
+                   Our three pillars form an interconnected loop where human capital, software delivery, and educational software continuously reinforce one another.
+               </p>
+           </div>
+
+           <!-- Synergy Process Steps -->
+           <div class="grid grid-cols-1 md:grid-cols-3 gap-8 relative">
+
+               <!-- Step 1 -->
+               <div class="glass-card p-8 rounded-2xl relative space-y-4">
+                   <div class="text-4xl font-extrabold font-serif text-bronze-500/40">01</div>
+                   <h3 class="text-xl font-bold text-white">Talent Acquisition</h3>
+                   <p class="text-slate-300 text-sm leading-relaxed">
+                       <strong>KeyTalent</strong> identifies top leaders and engineering talent, supplying the visionary brains needed to build complex technology.
+                   </p>
+                   <div class="pt-4 flex items-center text-xs font-semibold text-bronze-400 space-x-2">
+                       <span>Feeds talent into development</span>
+                       <i class="fa-solid fa-arrow-right"></i>
+                   </div>
+               </div>
+
+               <!-- Step 2 -->
+               <div class="glass-card p-8 rounded-2xl relative space-y-4 border-bronze-500/30">
+                   <div class="text-4xl font-extrabold font-serif text-bronze-400">02</div>
+                   <h3 class="text-xl font-bold text-white">Engineering Execution</h3>
+                   <p class="text-slate-300 text-sm leading-relaxed">
+                       <strong>HenHouse Tech</strong> builds scale custom software, off-shore teams, and specialized cloud solutions for corporate & internal ventures.
+                   </p>
+                   <div class="pt-4 flex items-center text-xs font-semibold text-bronze-400 space-x-2">
+                       <span>Powers product architecture</span>
+                       <i class="fa-solid fa-arrow-right"></i>
+                   </div>
+               </div>
+
+               <!-- Step 3 -->
+               <div class="glass-card p-8 rounded-2xl relative space-y-4">
+                   <div class="text-4xl font-extrabold font-serif text-bronze-500/40">03</div>
+                   <h3 class="text-xl font-bold text-white">Educational Scale</h3>
+                   <p class="text-slate-300 text-sm leading-relaxed">
+                       <strong>Academate</strong> deploys scalable platform tools for academic institutions, training the next generation of digital professionals.
+                   </p>
+                   <div class="pt-4 flex items-center text-xs font-semibold text-bronze-400 space-x-2">
+                       <span>Generates future talent pipeline</span>
+                       <i class="fa-solid fa-rotate"></i>
+                   </div>
+               </div>
+
+           </div>
+       </div>
+   </section>
+
+   <!-- LEADERSHIP SECTION -->
+   <section id="leadership" class="py-24 relative">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div class="text-center max-w-3xl mx-auto mb-14 space-y-4">
+               <div class="inline-flex items-center space-x-2 text-bronze-600 text-xs font-bold uppercase tracking-widest">
+                   <i class="fa-solid fa-crown"></i>
+                   <span>Executive Leadership</span>
+               </div>
+               <h2 class="text-3xl sm:text-5xl font-bold text-white tracking-tight">Leadership Across Our Ventures</h2>
+               <p class="text-slate-400 text-base">Experience spanning technology, talent, education, consumer brands, and cross-border growth.</p>
+           </div>
+
+           <div class="grid grid-cols-1 lg:grid-cols-2 gap-8">
+               <article class="glass-card rounded-2xl p-8 sm:p-10">
+                   <div class="flex flex-col sm:flex-row gap-6 items-start">
+                       <div class="w-28 h-28 flex-shrink-0 rounded-full bg-gradient-to-tr from-bronze-600 to-bronze-300 p-1">
+                           <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-sky-800 text-3xl font-serif font-bold">TH</div>
+                       </div>
+                       <div class="space-y-4">
+                           <div>
+                               <h3 class="text-2xl font-bold text-white">Tito Hen</h3>
+                               <p class="text-xs font-semibold uppercase tracking-widest text-bronze-600 mt-1">Founder & Executive Chairman</p>
+                           </div>
+                           <p class="text-slate-300 text-sm leading-relaxed">
+                               A senior technology executive and serial entrepreneur with over two decades of experience scaling businesses across Japan and the US. As the Founder of <strong>KeyTalent Inc.</strong> and <strong>HenHouseTechnology</strong>, and Co-Founder of <strong>HenHouse Japan</strong> and <strong>Academate.com</strong>, he combines enterprise sales discipline with executive search expertise to build high-growth, venture-backed tech platforms and talent solutions across APAC.
+                           </p>
+                           <ul class="list-disc pl-5 space-y-3 text-slate-300 text-sm leading-relaxed">
+<li><strong>Ventures &amp; Strategy:</strong> Founded Tokyo’s premier tech search firm, KeyTalent Inc., specializing in Software, SaaS, Cloud, AI, and Cybersecurity. Co-founded HenHouse Japan and Academate.com to drive regional expansion and digital learning.</li>
+<li><strong>Recruitment Excellence:</strong> Over a decade as a top-billing Partner and Practice Leader across Japan &amp; APAC, earning multiple #1 recruiter awards from major enterprise software vendors and leading multi-P&amp;L divisions.</li>
+<li><strong>Enterprise Sales:</strong> Silicon Valley and Tokyo enterprise sales background with Oracle, Siebel Systems (Global Excellence Award winner), and Walker Interactive Systems.</li>
+</ul>
+                       </div>
+                   </div>
+               </article>
+
+               <article class="glass-card rounded-2xl p-8 sm:p-10">
+                   <div class="flex flex-col sm:flex-row gap-6 items-start">
+                       <div class="w-28 h-28 flex-shrink-0 rounded-full bg-gradient-to-tr from-bronze-600 to-bronze-300 p-1">
+                           <div class="w-full h-full rounded-full bg-white flex items-center justify-center text-sky-800 text-3xl font-serif font-bold">AS</div>
+                       </div>
+                       <div class="space-y-4">
+                           <div>
+                               <h3 class="text-2xl font-bold text-white">Aki Serizawa</h3>
+                               <p class="text-xs font-semibold uppercase tracking-widest text-bronze-600 mt-1">Group Executive</p>
+                           </div>
+                           <p class="text-slate-300 text-sm leading-relaxed">
+                               Aki Serizawa drives strategic growth and cross-entity execution across HenHouse Partners’ portfolio companies, including Academate and HenHouse Foods. With a proven track record of scaling venture initiatives from zero to recognized industry brands, she bridges high-level corporate strategy with operational excellence.
+                           </p>
+                           <p class="text-slate-400 text-sm leading-relaxed">
+                               Aki holds a Bachelor’s degree in Political Science and Economics from Waseda University and is fully bilingual in Japanese and English. Her leadership combines rigorous market analysis with scalable execution, guiding group entities toward sustained commercial expansion and cross-border alignment across the Asia-Pacific region.
+                           </p>
+                       </div>
+                   </div>
+               </article>
+           </div>
+       </div>
+   </section>
+
+   <!-- FOOTER -->
+   <footer class="bg-navy-950 border-t border-white/10 pt-16 pb-12 relative">
+       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+           <div class="grid grid-cols-1 md:grid-cols-4 gap-10 pb-12 border-b border-white/10">
+
+               <!-- Col 1: Brand Info -->
+               <div class="space-y-4 md:col-span-1">
+                   <img src="./henhouse-partners-logo.jpeg" alt="HenHouse Partners" class="h-14 w-auto max-w-[230px] rounded-md object-contain bg-white">
+                   <p class="text-xs text-slate-400 leading-relaxed">
+                       Executive investment and group platform overseeing KeyTalent, HenHouse Technology, Academate, and Hen House Foods.
+                   </p>
+               </div>
+
+               <!-- Col 2: Portfolio Links -->
+               <div class="space-y-3">
+                   <h4 class="text-xs font-bold text-white uppercase tracking-widest">Group Entities</h4>
+                   <ul class="space-y-2 text-xs text-slate-400">
+                       <li><a href="https://keytalent.co.jp/" target="_blank" class="hover:text-bronze-400 transition-colors">KeyTalent Executive Search</a></li>
+                       <li><a href="https://henhousetechnology.com/" class="hover:text-bronze-400 transition-colors">HenHouse Technology</a></li>
+                       <li><a href="https://academate.com/" target="_blank" class="hover:text-bronze-400 transition-colors">Academate Platform</a></li>
+                       <li><a href="https://henhouse.jp/" target="_blank" rel="noopener noreferrer" class="hover:text-bronze-400 transition-colors">Hen House Foods</a></li>
+                   </ul>
+               </div>
+
+               <!-- Col 3: Navigation -->
+               <div class="space-y-3">
+                   <h4 class="text-xs font-bold text-white uppercase tracking-widest">Corporate</h4>
+                   <ul class="space-y-2 text-xs text-slate-400">
+                       <li><a href="#about" class="hover:text-bronze-400 transition-colors">About the Partnership</a></li>
+                       <li><a href="#synergy" class="hover:text-bronze-400 transition-colors">Ecosystem Synergies</a></li>
+                       <li><a href="#leadership" class="hover:text-bronze-400 transition-colors">Leadership</a></li>
+                   </ul>
+               </div>
+
+               <!-- Col 4: Regional Hubs -->
+               <div class="space-y-3">
+                   <h4 class="text-xs font-bold text-white uppercase tracking-widest">Regional Presence</h4>
+                   <p class="text-xs text-slate-400 leading-relaxed">
+                       Tokyo, Japan<br>
+                       Asia-Pacific Regional Hubs
+                   </p>
+                   <button onclick="openModal()" class="inline-block text-xs text-bronze-400 hover:text-bronze-300 font-semibold underline underline-offset-4">
+                       Inquire Group Partnership &rarr;
+                   </button>
+               </div>
+
+           </div>
+
+           <!-- Bottom Copyright -->
+           <div class="pt-8 flex flex-col sm:flex-row items-center justify-between text-xs text-slate-500 space-y-4 sm:space-y-0">
+               <div>
+                   &copy; <span id="year"></span> HenHouse Partners Group. All rights reserved.
+               </div>
+               <div class="flex space-x-6">
+                   <a href="#" class="hover:text-slate-400">Privacy Policy</a>
+                   <a href="#" class="hover:text-slate-400">Terms of Governance</a>
+               </div>
+           </div>
+       </div>
+   </footer>
+
+   <!-- CONTACT MODAL -->
+   <div id="contact-modal" class="fixed inset-0 z-50 hidden flex items-center justify-center p-4 bg-navy-950/80 backdrop-blur-md">
+       <div class="glass-card max-w-lg w-full rounded-2xl p-8 border border-bronze-500/30 relative shadow-2xl animate-fade-in">
+           <button onclick="closeModal()" class="absolute top-4 right-4 text-slate-400 hover:text-white p-2">
+               <i class="fa-solid fa-xmark text-lg"></i>
+           </button>
+
+           <div class="mb-6 space-y-1">
+               <h3 class="text-2xl font-bold text-white">Contact HenHouse Partners</h3>
+               <p class="text-xs text-slate-400">Partnership inquiries, subsidiary synergies, and investor communications.</p>
+           </div>
+
+           <form id="modal-form" onsubmit="handleFormSubmit(event)" class="space-y-4">
+               <div>
+                   <label class="block text-xs font-medium text-slate-300 mb-1">Full Name</label>
+                   <input type="text" name="name" required placeholder="e.g. Executive Partner" class="w-full px-4 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm focus:outline-none focus:border-bronze-500 transition-colors">
+               </div>
+               <div>
+                   <label class="block text-xs font-medium text-slate-300 mb-1">Corporate Email</label>
+                   <input type="email" name="email" required placeholder="name@company.com" class="w-full px-4 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm focus:outline-none focus:border-bronze-500 transition-colors">
+               </div>
+               <div>
+                   <label class="block text-xs font-medium text-slate-300 mb-1">Entity of Interest</label>
+                   <select name="entity" class="w-full px-4 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-slate-300 text-sm focus:outline-none focus:border-bronze-500 transition-colors">
+                       <option>HenHouse Partners (Parent Group)</option>
+                       <option>KeyTalent (Executive Search)</option>
+                       <option>HenHouse Technology (IT Outsourcing)</option>
+                       <option>Academate (EdTech & ERP)</option>
+                   </select>
+               </div>
+               <div>
+                   <label class="block text-xs font-medium text-slate-300 mb-1">Message / Inquiry</label>
+                   <textarea name="message" rows="3" required placeholder="Describe your inquiry..." class="w-full px-4 py-2.5 rounded-xl bg-navy-900 border border-white/10 text-white text-sm focus:outline-none focus:border-bronze-500 transition-colors"></textarea>
+               </div>
+
+               <div id="form-status" class="hidden text-xs py-2 text-emerald-400 font-semibold">
+                   Your email application has opened with your inquiry ready to send.
+               </div>
+
+               <button type="submit" class="w-full py-3 rounded-xl bg-gradient-to-r from-bronze-500 to-bronze-600 text-navy-950 font-bold text-xs uppercase tracking-wider hover:from-bronze-400 hover:to-bronze-500 transition-all">
+                   Submit Inquiry
+               </button>
+           </form>
+       </div>
+   </div>
+
+   <!-- INTERACTIVE SCRIPTS -->
+   <script>
+       // Set Year dynamically
+       document.getElementById('year').textContent = new Date().getFullYear();
+
+       // Mobile Menu Toggle
+       const menuBtn = document.getElementById('mobile-menu-btn');
+       const mobileMenu = document.getElementById('mobile-menu');
+       const menuIcon = document.getElementById('menu-icon');
+
+       menuBtn.addEventListener('click', () => {
+           mobileMenu.classList.toggle('hidden');
+           if (mobileMenu.classList.contains('hidden')) {
+               menuIcon.className = 'fa-solid fa-bars text-xl';
+           } else {
+               menuIcon.className = 'fa-solid fa-xmark text-xl';
+           }
+       });
+
+       function closeMobileMenu() {
+           mobileMenu.classList.add('hidden');
+           menuIcon.className = 'fa-solid fa-bars text-xl';
+       }
+
+       // Contact Modal Logic
+       function openModal() {
+           document.getElementById('contact-modal').classList.remove('hidden');
+       }
+
+       function closeModal() {
+           document.getElementById('contact-modal').classList.add('hidden');
+           document.getElementById('form-status').classList.add('hidden');
+       }
+
+       function handleFormSubmit(e) {
+           e.preventDefault();
+           const data = new FormData(e.currentTarget);
+           const subject = encodeURIComponent(`HenHouse inquiry: ${data.get('entity')}`);
+           const body = encodeURIComponent(`Name: ${data.get('name')}\nEmail: ${data.get('email')}\nEntity: ${data.get('entity')}\n\n${data.get('message')}`);
+           const status = document.getElementById('form-status');
+           status.classList.remove('hidden');
+           window.location.href = `mailto:contact@henhouse.jp?subject=${subject}&body=${body}`;
+       }
+
+       // Portfolio Card Filter Logic
+       function filterPortfolio(category) {
+           const cards = document.querySelectorAll('.portfolio-card');
+           const btns = document.querySelectorAll('.portfolio-btn');
+
+           // Reset button styles
+           btns.forEach(btn => {
+               btn.className = "portfolio-btn px-5 py-2 rounded-full text-xs font-semibold border border-white/10 text-slate-300 hover:border-bronze-500/40 hover:text-white transition-all";
+           });
+
+           // Set Active button style
+           const activeBtn = document.getElementById(`btn-${category}`);
+           if (activeBtn) {
+               activeBtn.className = "portfolio-btn px-5 py-2 rounded-full text-xs font-semibold border border-bronze-500/40 bg-bronze-500 text-navy-950 transition-all";
+           }
+
+           // Filter cards
+           cards.forEach(card => {
+               if (category === 'all') {
+                   card.style.display = 'flex';
+               } else {
+                   if (card.classList.contains(category)) {
+                       card.style.display = 'flex';
+                   } else {
+                       card.style.display = 'none';
+                   }
+               }
+           });
+       }
+   </script>
+</body>
+</html>
