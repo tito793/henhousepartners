@@ -6,13 +6,13 @@
   "tailwind.config.cjs": "eb6b7ca3c4de7c3a673c2b50fb3627b76701f4315ead8a1fa0a271086138a4ae",
   "package-lock.json": "b24664d9fd5b0d334f387625230d4c86ee9909470c415da23f521c9f9b99378e",
   "src/styles.css": "cc1a7ad0d019ddb1d32d0ecb588ba0ac26ce41d8625dd6c366348b25f83a28ec",
-  "src/index.html": "a9b2e6fa7d0069a0598372f4ec5e8f3c5b947607103373429237768db26713f4",
+  "src/index.html": "0744e7060cca02ab8ee33420a2f93e8d605ad680cbc94896b3890b98b78a11bc",
   "public/_headers": "7712db3c8acc3821e175d3b62d123ad8e33ced9bba69a721c6511a4a5ef9bd94",
   "public/henhouse-partners-logo.jpeg": "877fe4215620962afbe0164a1c5080aeec4c769e0c90682d069967fb22494ed7",
   "dist/_headers": "7712db3c8acc3821e175d3b62d123ad8e33ced9bba69a721c6511a4a5ef9bd94",
   "dist/henhouse-partners-logo.jpeg": "877fe4215620962afbe0164a1c5080aeec4c769e0c90682d069967fb22494ed7",
   "dist/styles.css": "c4376a3b65cfb423248c17678c3bae590f9a7645d8722c7cb67d3f04d67270cf",
-  "dist/index.html": "a9b2e6fa7d0069a0598372f4ec5e8f3c5b947607103373429237768db26713f4",
+  "dist/index.html": "0744e7060cca02ab8ee33420a2f93e8d605ad680cbc94896b3890b98b78a11bc",
   "scripts/build.mjs": "f1faac529a3156b0a1c725ef3707ac6f118e1d0c637346398a6886298b61c807",
   "public/logos/henhouse-technology.jpeg": "349524d564c5ba116bd43efdad4facc537fed53241eb2bb39dd35426ab5084fb",
   "dist/logos/henhouse-technology.jpeg": "349524d564c5ba116bd43efdad4facc537fed53241eb2bb39dd35426ab5084fb",
@@ -28,5 +28,6 @@
   "docs/logos/henhouse-partners.jpeg": "fa8049f4c22367d18ad13d6f33be15a3f6444c1fde1750e8b88ebafbb3bd6168",
   "public/logos/henhouse-japan.png": "12060adc84bbbfca714c073c23c67e5b8f832b91103bd21179b9a091a5346df2",
   "dist/logos/henhouse-japan.png": "12060adc84bbbfca714c073c23c67e5b8f832b91103bd21179b9a091a5346df2",
-  "docs/logos/henhouse-japan.png": "12060adc84bbbfca714c073c23c67e5b8f832b91103bd21179b9a091a5346df2"
+  "docs/logos/henhouse-japan.png": "12060adc84bbbfca714c073c23c67e5b8f832b91103bd21179b9a091a5346df2",
+  "docs/index.html": "0744e7060cca02ab8ee33420a2f93e8d605ad680cbc94896b3890b98b78a11bc"
 }
