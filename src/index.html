@@ -76,7 +76,10 @@
        section h1, section h2, section h3, section h4 { color: #10233A !important; }
        section .text-slate-200, section .text-slate-300 { color: #334155 !important; }
        section .text-slate-400 { color: #64748B !important; }
-       #home .text-white { color: #10233A !important; }
+       .hero-pattern .text-white { color: #10233A !important; }
+       .hero-pattern .hero-tagline { color: #1F5275; }
+       .hero-pattern .metric-label { color: #334155 !important; }
+       .hero-pattern .gold-gradient-text { background-image: linear-gradient(135deg, #10233A 0%, #1F5275 50%, #1D5F8F 100%); }
        section .bg-white\/5 { background-color: #EAF5FC !important; }
        section .border-white\/10, section .border-white\/5 { border-color: rgba(89, 172, 234, 0.24) !important; }
        #about, #synergy { background: rgba(234, 245, 252, 0.72) !important; }
@@ -169,7 +172,7 @@
            <div class="text-center max-w-4xl mx-auto space-y-8">
 
                <!-- Tagline Badge -->
-               <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-card border border-bronze-500/20 text-bronze-300 text-xs sm:text-sm font-semibold tracking-wide uppercase">
+               <div class="inline-flex items-center space-x-2 px-4 py-2 rounded-full glass-card hero-tagline border border-bronze-500/20 text-bronze-300 text-xs sm:text-sm font-semibold tracking-wide uppercase">
                    <span class="w-2 h-2 rounded-full bg-bronze-400 animate-pulse"></span>
                    <span>Empowering Technology, Talent & Educational Progress Across APAC</span>
                </div>
@@ -199,19 +202,19 @@
                <div class="pt-16 grid grid-cols-2 md:grid-cols-4 gap-6 border-t border-white/10 max-w-4xl mx-auto">
                    <div class="p-4">
                        <div class="text-3xl lg:text-4xl font-extrabold text-white font-serif">4</div>
-                       <div class="text-xs uppercase tracking-widest text-slate-400 mt-1">Portfolio Ventures</div>
+                       <div class="metric-label text-xs uppercase tracking-widest text-slate-400 mt-1">Portfolio Ventures</div>
                    </div>
                    <div class="p-4">
                        <div class="text-3xl lg:text-4xl font-extrabold text-white font-serif">APAC</div>
-                       <div class="text-xs uppercase tracking-widest text-slate-400 mt-1">Strategic Market Focus</div>
+                       <div class="metric-label text-xs uppercase tracking-widest text-slate-400 mt-1">Strategic Market Focus</div>
                    </div>
                    <div class="p-4">
                        <div class="text-3xl lg:text-4xl font-extrabold text-white font-serif">100%</div>
-                       <div class="text-xs uppercase tracking-widest text-slate-400 mt-1">Synergistic Integration</div>
+                       <div class="metric-label text-xs uppercase tracking-widest text-slate-400 mt-1">Synergistic Integration</div>
                    </div>
                    <div class="p-4">
                        <div class="text-3xl lg:text-4xl font-extrabold text-white font-serif">Enterprise</div>
-                       <div class="text-xs uppercase tracking-widest text-slate-400 mt-1">Scale Solutions</div>
+                       <div class="metric-label text-xs uppercase tracking-widest text-slate-400 mt-1">Scale Solutions</div>
                    </div>
                </div>
 
